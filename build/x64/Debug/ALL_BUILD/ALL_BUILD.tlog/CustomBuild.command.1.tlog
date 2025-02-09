@@ -1,0 +1,10 @@
+^D:\CPP\WORDLE\CMAKELISTS.TXT
+setlocal
+D:\sis_admin\cmake-3.31.4-windows-x86_64\bin\cmake.exe -SD:/cpp/wordle -BD:/cpp/wordle/build --check-stamp-file D:/cpp/wordle/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
